@@ -175,6 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
         quizSection.classList.remove('hidden');
         quizSection.scrollIntoView({ behavior: 'smooth' });
         displayQuestion();
+        gtag('event', 'quiz_start');
     }
 
     function displayQuestion() {
@@ -223,6 +224,10 @@ document.addEventListener('DOMContentLoaded', () => {
             // Mostra o feedback de erro
             feedbackText.innerHTML = currentFeedback.incorrect;
         }
+        gtag('event', 'answer_selected', {
+        'question_number': currentQuestionIndex + 1, // Envia o nº da pergunta
+        'is_correct': isCorrect, // Envia true ou false
+        'selected_option': selectedIndex // Envia qual opção ele marcou
 
         // --- O restante da lógica permanece o mesmo ---
 
@@ -268,6 +273,10 @@ document.addEventListener('DOMContentLoaded', () => {
             headline = `Excelente! Você acertou ${score} de 5, mostrando um conhecimento avançado sobre collabs.`;
             text = "Você já entende a teoria e os mecanismos por trás de uma parceria de sucesso. Agora, o desafio é a execução: encontrar o parceiro ideal, navegar as negociações e garantir um ROI real. Vamos acelerar esse processo.";
         }
+        gtag('event', 'quiz_complete', {
+        'final_score': score, // Envia a pontuação final
+        'user_segment': segment // Envia o perfil (Explorador/Estrategista)
+    });
 
         document.getElementById('result-headline').innerHTML = headline;
         document.getElementById('result-text').innerHTML = text;
@@ -302,6 +311,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (response.ok) {
             submitButton.innerHTML = "Obrigado! Em breve entraremos em contato.";
             leadForm.reset(); // Limpa o formulário
+            gtag('event', 'form_submit', { 'form_name': 'leads' });
         } else {
             // Se deu erro na rede
             submitButton.disabled = false;
@@ -321,5 +331,6 @@ document.addEventListener('DOMContentLoaded', () => {
 </body>
 
 </html>
+
 
 
