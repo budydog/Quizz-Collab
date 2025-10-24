@@ -1,12 +1,108 @@
-/*
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta name="google-site-verification" content="ljncDtzhyUzhJAYlXEM_Q7XqDCz5uwZ4zgwV092Atf4" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2Brands - Diagnóstico de Estratégia em Collabs</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2DXSQR9K2K"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-2DXSQR9K2K');
+    </script>
+</head>
+<body>
+
+    <header id="hero" class="section">
+        <div class="container">
+            <h1>Colaborações entre marcas (collabs) movem bilhões de reais. A sua marca está preparada para elas?</h1>
+            <p class="subtitle">O sucesso de uma parceria não é obra do acaso. É estratégia. Responda 5 perguntas e entenda qual o seu nível de entendimento sobre elas.</p>
+            <a href="#quiz-section" class="cta-button">Responda já</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="quiz-section" class="section hidden">
+            <div class="container quiz-container">
+                <h2>Diagnóstico de Estratégia em Collabs</h2>
+                <div id="progress-bar-container">
+                    <div id="progress-bar"></div>
+                    <span id="progress-text">Pergunta 1 de 5</span>
+                </div>
+                <div id="quiz-card">
+                    <h3 id="question-text"></h3>
+                    <div id="answer-options" class="answer-grid">
+                        </div>
+                    <p id="feedback-text" class="feedback"></p>
+                    
+                    <button id="next-question-button" class="cta-button hidden">Próxima Pergunta</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="results-section" class="section hidden">
+            <div class="container results-container">
+                <h2 id="result-headline"></h2>
+                <p id="result-text"></p>
+                
+                <div class="form-container">
+                    <h3>Fale com um Especialista da 2Brands</h3>
+                    <form id="lead-form" action="https://formspree.io/f/mjkangkp" method="POST">
+                        <div class="form-group">
+                            <input type="text" id="fullName" name="fullName" placeholder="Nome Completo" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="E-mail Corporativo" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="companyName" name="companyName" placeholder="Nome da Empresa" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="jobTitle" name="jobTitle" placeholder="Cargo" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="url" id="website" name="website" placeholder="Website da Empresa" required>
+                        </div>
+                        
+                        <input type="hidden" id="hidden-segment" name="segmento" value="">
+                        
+                        <button type="submit" class="cta-button final-cta">Fale conosco</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section id="value-prop-section" class="section">
+            <div class="container">
+                <h2>2Brands: Da Estratégia à Execução. Sem Complicações.</h2>
+                <p>Nós transformamos o potencial de uma parceria em resultados mensuráveis. Cuidamos de toda a complexidade — da prospecção do parceiro ideal e negociação de contratos à gestão da campanha e análise de ROI — para que você possa focar no crescimento da sua marca. Somos o parceiro end-to-end que sua verdadeira collab precisa.</p>  
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 2Brands. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+    /*
 * =================================================================
-* LÓGICA DE INTERAÇÃO PARA O DIAGNÓSTICO 2BRANDS (COM FEEDBACK DUPLO)
+* LÓGICA DE INTERAÇÃO PARA O DIAGNÓSTICO 2BRANDS (CÓDIGO CORRIGIDO)
 * =================================================================
 */
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- ESTRUTURA DE DADOS DO QUIZ (MODIFICADA) ---
+    // --- ESTRUTURA DE DADOS DO QUIZ ---
     const quizData = [
         {
             question: "Além da sobreposição de público-alvo, qual é o critério mais crucial para garantir a autenticidade e o sucesso de uma collab?",
@@ -112,14 +208,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const correctIndex = quizData[currentQuestionIndex].correctAnswerIndex;
         const currentFeedback = quizData[currentQuestionIndex].feedback;
 
-        // *** CORREÇÃO 1: Definimos a variável 'isCorrect' aqui ***
+        // *** ESTA É A VARIÁVEL CORRIGIDA QUE FALTAVA ***
         const isCorrect = (selectedIndex === correctIndex);
 
         const allOptions = document.querySelectorAll('.answer-option');
         allOptions.forEach(option => option.classList.add('disabled'));
 
         // LÓGICA DE FEEDBACK
-        if (isCorrect) { // Usamos a variável
+        if (isCorrect) { 
             score++;
             event.target.classList.add('correct');
             feedbackText.innerHTML = currentFeedback.correct;
@@ -129,11 +225,11 @@ document.addEventListener('DOMContentLoaded', () => {
             feedbackText.innerHTML = currentFeedback.incorrect;
         }
 
-        // *** CORREÇÃO 2: A chamada 'gtag' foi fechada com '});' ***
+        // *** ESTE É O BLOCO 'GTAG' CORRIGIDO ***
         gtag('event', 'answer_selected', {
-            'question_number': currentQuestionIndex + 1, // Envia o nº da pergunta
-            'is_correct': isCorrect, // Envia true ou false (agora 'isCorrect' existe)
-            'selected_option': selectedIndex // Envia qual opção ele marcou
+            'question_number': currentQuestionIndex + 1, 
+            'is_correct': isCorrect, 
+            'selected_option': selectedIndex 
         });
 
         // --- O restante da lógica permanece o mesmo ---
@@ -234,3 +330,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
+    </script>
+
+</body>
+
+</html>
