@@ -49,7 +49,7 @@ body {
     /* Removido o gradiente para resolver a "fadiga visual" */
     background-color: var(--bg-color); 
     color: var(--text-color);
-    min-height: 60vh; /* <-- ALTERAÇÃO APLICADA (era 80vh) */
+    min-height: 30vh; /* <-- ALTERAÇÃO APLICADA (era 80vh) */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -272,3 +272,4 @@ body {
         font-size: 2.5rem;
     }
 }
+
