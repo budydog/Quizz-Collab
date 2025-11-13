@@ -1,9 +1,10 @@
-/* --- Variáveis Globais e Reset --- */
+/* --- Variáveis Globais e Reset (COM A NOVA IDENTIDADE VISUAL) --- */
 :root {
-    --bg-color: #F8F9FA;
-    --text-color: #212529;
-    --primary-accent: #6A11CB;
-    --secondary-accent: #2575FC;
+    --bg-color: #FFFFFF; /* Fundo branco, como no banner */
+    --bg-color-alt: #F8F9FA; /* Cor de contraste para os cards */
+    --text-color: #333333; /* Texto principal escuro */
+    --primary-accent: #D800A8; /* Magenta (do logo 2Brands) */
+    --secondary-accent: #9DCD5A; /* Verde (do logo ,) */
     --correct-feedback: #28a745;
     --incorrect-feedback: #dc3545;
     --white-color: #FFFFFF;
@@ -43,10 +44,11 @@ body {
     display: none;
 }
 
-/* --- Estilos de Cabeçalho (Hero) --- */
+/* --- Estilos de Cabeçalho (Hero) - ATUALIZADO --- */
 #hero {
-    background: linear-gradient(45deg, var(--primary-accent), var(--secondary-accent));
-    color: var(--white-color);
+    /* Removido o gradiente para resolver a "fadiga visual"  */
+    background-color: var(--bg-color); 
+    color: var(--text-color);
     min-height: 80vh;
     display: flex;
     align-items: center;
@@ -56,42 +58,47 @@ body {
 #hero h1 {
     font-size: 3rem;
     margin-bottom: 20px;
+    color: var(--primary-accent); /* Cor primária no título */
 }
 
-#hero .subtitle { /* Corrigido de #hero.subtitle para #hero .subtitle */
+#hero .subtitle {
     font-size: 1.25rem;
     max-width: 700px;
     margin: 0 auto 30px auto;
+    color: var(--text-color);
     opacity: 0.9;
 }
 
-/* --- Botões CTA --- */
+/* --- Botões CTA - ATUALIZADO --- */
 .cta-button {
     display: inline-block;
-    background-color: var(--white-color);
-    color: var(--primary-accent);
+    /* Invertido para se destacar no fundo branco */
+    background-color: var(--primary-accent);
+    color: var(--white-color);
     padding: 15px 30px;
     border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-    border: none; /* Adicionado para consistência com o botão "Próxima" */
-    cursor: pointer; /* Adicionado para consistência */
+    border: none;
+    cursor: pointer;
 }
 
 .cta-button:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    background-color: #A1007B; /* Magenta mais escuro */
 }
 
 .final-cta {
+    /* Aplicando o novo gradiente da marca */
     background: linear-gradient(45deg, var(--primary-accent), var(--secondary-accent));
     color: var(--white-color);
     width: 100%;
     font-size: 1rem;
 }
 
-/* --- Seção do Quiz --- */
+/* --- Seção do Quiz - ATUALIZADO --- */
 .quiz-container {
     max-width: 700px;
 }
@@ -108,8 +115,9 @@ body {
 }
 
 #progress-bar {
-    width: 20%; /* Inicia em 1/5 */
+    width: 20%; 
     height: 100%;
+    /* Aplicando o novo gradiente da marca */
     background: linear-gradient(45deg, var(--primary-accent), var(--secondary-accent));
     border-radius: 10px;
     transition: width 0.5s ease;
@@ -124,7 +132,8 @@ body {
 }
 
 #quiz-card {
-    background-color: var(--white-color);
+    /* Usando cor alternativa para contraste com o fundo */
+    background-color: var(--bg-color-alt); 
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.08);
@@ -142,20 +151,20 @@ body {
 }
 
 .answer-option {
-    background-color: var(--bg-color);
+    background-color: var(--bg-color); /* Botões brancos */
     border: 2px solid var(--grey-color);
     padding: 15px;
     border-radius: 8px;
     cursor: pointer;
     text-align: left;
     transition: all 0.2s ease;
-    font-family: var(--font-family); /* Garante consistência da fonte */
-    font-size: 1rem; /* Garante consistência da fonte */
+    font-family: var(--font-family); 
+    font-size: 1rem; 
 }
 
 .answer-option:hover {
     border-color: var(--primary-accent);
-    background-color: #e9ecef;
+    background-color: #fdf4fA; /* Cor magenta bem clara */
 }
 
 .answer-option.correct {
@@ -182,13 +191,12 @@ body {
     min-height: 24px;
 }
 
-/* ESTILO ADICIONADO PARA O BOTÃO "PRÓXIMA PERGUNTA" */
 #next-question-button {
     margin-top: 20px;
 }
 
 
-/* --- Seção de Resultados e Formulário --- */
+/* --- Seção de Resultados e Formulário - ATUALIZADO --- */
 .results-container {
     max-width: 700px;
 }
@@ -205,7 +213,7 @@ body {
 }
 
 .form-container {
-    background-color: var(--white-color);
+    background-color: var(--bg-color-alt); /* Contraste com o fundo */
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.08);
@@ -228,25 +236,20 @@ body {
     border-radius: 5px;
     font-family: var(--font-family);
     font-size: 1rem;
+    background-color: var(--white-color);
 }
 
-/* --- Seção de Prova Social --- */
+/* --- Seção de Proposta de Valor (Nova Posição) --- */
+/* Estilo para o logo adicionado */
+.section-logo {
+    max-width: 250px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
 #value-prop-section p {
     max-width: 700px;
     margin: 20px auto 40px auto;
-}
-
-.logo-strip {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    filter: grayscale(100%);
-    opacity: 0.6;
-}
-
-.logo-placeholder {
-    font-weight: 700;
-    color: #adb5bd;
 }
 
 /* --- Rodapé --- */
