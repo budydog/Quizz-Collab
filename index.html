@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2Brands - Diagnóstico de Estratégia em Collabs</title>
+    
+    <link rel="icon" href="logo.png" type="image/png">
+    
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +17,6 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-2DXSQR9K2K');
     </script>
 </head>
@@ -23,12 +25,22 @@
     <header id="hero" class="section">
         <div class="container">
             <h1>Colaborações entre marcas (collabs) movem bilhões de reais. A sua marca está preparada?</h1>
-            <p class="subtitle">O sucesso de uma parceria não é obra do acaso. É estratégia. Responda 5 perguntas e entenda qual o seu nível de entendimento sobre elas.</p>
+            <p class="subtitle">Esqueça formulários genéricos. Receba um diagnóstico instantâneo da sua maturidade em parcerias. Responda 5 perguntas e descubra seu perfil.</p>
             <a href="#quiz-section" class="cta-button">Responda já</a>
         </div>
     </header>
 
     <main>
+
+        <section id="value-prop-section" class="section">
+            <div class="container">
+                <img src="logo.png" alt="2Brands one purpose." class="section-logo">
+                
+                <h2>2Brands: Da Estratégia à Execução. Sem Complicações.</h2>
+                <p>Nós transformamos o potencial de uma parceria em resultados mensuráveis. Cuidamos de toda a complexidade — da prospecção do parceiro ideal e negociação de contratos à gestão da campanha e análise de ROI — para que você possa focar no crescimento da sua marca. Somos o parceiro end-to-end que sua verdadeira collab precisa.</p>  
+            </div>
+            </section>
+
         <section id="quiz-section" class="section hidden">
             <div class="container quiz-container">
                 <h2>Diagnóstico de Estratégia em Collabs</h2>
@@ -67,7 +79,7 @@
                         <div class="form-group">
                             <input type="text" id="jobTitle" name="jobTitle" placeholder="Cargo" required>
                         </div>
-    
+                        
                         <input type="hidden" id="hidden-segment" name="segmento" value="">
                         
                         <button type="submit" class="cta-button final-cta">Fale conosco</button>
@@ -76,12 +88,6 @@
             </div>
         </section>
 
-        <section id="value-prop-section" class="section">
-            <div class="container">
-                <h2>2Brands: Da Estratégia à Execução. Sem Complicações.</h2>
-                <p>Nós transformamos o potencial de uma parceria em resultados mensuráveis. Cuidamos de toda a complexidade — da prospecção do parceiro ideal e negociação de contratos à gestão da campanha e análise de ROI — para que você possa focar no crescimento da sua marca. Somos o parceiro end-to-end que sua verdadeira collab precisa.</p>  
-            </div>
-        </section>
     </main>
 
     <footer class="footer">
@@ -92,246 +98,217 @@
 
     <script>
     /*
-* =================================================================
-* LÓGICA DE INTERAÇÃO PARA O DIAGNÓSTICO 2BRANDS (CÓDIGO CORRIGIDO)
-* =================================================================
-*/
+    * =================================================================
+    * LÓGICA DE INTERAÇÃO (COM CORREÇÃO ORTOGRÁFICA)
+    * =================================================================
+    */
 
-document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('DOMContentLoaded', () => {
 
-    // --- ESTRUTURA DE DADOS DO QUIZ ---
-    const quizData = [
-        {
-            question: "Além da sobreposição de público-alvo, qual é o critério mais crucial para garantir a autenticidade e o sucesso de uma collab?",
-            options: ["Potencial de viralização", "Alinhamento de valores e propósito de marca", "Orçamento de marketing do parceiro", "Número de seguidores do parceiro"],
-            correctAnswerIndex: 1,
-            feedback: {
-                correct: "Correto! O alinhamento de valores é a base que sustenta a credibilidade da parceria a longo prazo.",
-                incorrect: "Quase lá. Embora a viralização seja ótima, o alinhamento de valores é o que garante que a parceria pareça autêntica e não apenas uma 'caça-cliques'."
+        // --- ESTRUTURA DE DADOS DO QUIZ ---
+        const quizData = [
+            {
+                question: "Além da sobreposição de público-alvo, qual é o critério mais crucial para garantir a autenticidade e o sucesso de uma collab?",
+                options: ["Potencial de viralização", "Alinhamento de valores e propósito de marca", "Orçamento de marketing do parceiro", "Número de seguidores do parceiro"],
+                correctAnswerIndex: 1,
+                feedback: {
+                    correct: "Correto! O alinhamento de valores é a base que sustenta a credibilidade da parceria a longo prazo.",
+                    incorrect: "Quase lá. Embora a viralização seja ótima, o alinhamento de valores é o que garante que a parceria pareça autêntica e não apenas uma 'caça-cliques'."
+                }
+            },
+            {
+                // CORREÇÃO ORTOGRÁFICA (Baseado no Achado 4)
+                question: "Para uma collab focada em fortalecer o capital de marca, qual destas métricas é a mais relevante?",
+                options: ["Vendas diretas do produto", "Custo por Clique (CPC) nos anúncios", "Análise de Sentimento e 'Share of Voice'", "Taxa de abertura de e-mail marketing"],
+                correctAnswerIndex: 2,
+                feedback: {
+                    correct: "Correto! Brand Equity é medido pela percepção da marca, tornando a análise de sentimento o indicador mais direto.",
+                    incorrect: "Não exatamente. Vendas são importantes (ROI), mas o *Brand Equity* (valor da marca) é medido pela *percepção* e sentimento do público."
+                }
+            },
+            {
+                question: "Qual é o principal diferencial de um modelo de 'Colaboração' em relação a um simples 'Licenciamento'?",
+                options: ["Colaboração é sempre mais barato", "Licenciamento envolve apenas o logo, Colaboração envolve o produto", "Colaboração implica na criação de um produto/serviço novo e conjunto", "Apenas marcas de luxo fazem Colaborações"],
+                correctAnswerIndex: 2,
+                feedback: {
+                    correct: "Exato! Licenciamento é 'alugar' a marca, Colaboração é 'criar junto', gerando valor mútuo e inovação.",
+                    incorrect: "Na verdade, o licenciamento é apenas o uso da marca, enquanto o colaboração envolve duas marcas se unindo para criar um produto novo e compartilhado."
+                }
+            },
+            {
+                question: "Ao negociar uma parceria, qual é o erro mais comum que as marcas 'iniciantes' cometem?",
+                options: ["Focar excessivamente na divisão de receita imediata", "Ser transparente demais sobre suas fraquezas", "Pedir garantias legais excessivas", "Não ter um plano de marketing definido"],
+                correctAnswerIndex: 0,
+                feedback: {
+                    correct: "Precisamente. Muitas focam no ganho de curto prazo e esquecem o valor estratégico (awareness, posicionamento) que é o maior ativo de uma boa collab.",
+                    incorrect: "Pense de novo. O erro mais comum é focar apenas no dinheiro imediato (receita) e esquecer o valor estratégico de longo prazo, como o ganho de audiência e posicionamento."
+                }
+            },
+            {
+                question: "Qual elemento é fundamental para garantir que uma das marcas participantes da collab não 'canibalize' o público da outra?",
+                options: ["Lançar em datas completamente diferentes", "Usar exatamente a mesma comunicação", "Uma clara definição de 'storytelling' que una as duas marcas", "Oferecer o produto apenas para clientes existentes"],
+                correctAnswerIndex: 2,
+                feedback: {
+                    correct: "Correto! O 'storytelling' é a cola que justifica a parceria para o público, mostrando por que as duas marcas fazem sentido juntas.",
+                    incorrect: "Não é bem por aí. A 'cola' que une as marcas e evita a canibalização é um bom 'storytelling', que explica ao público *por que* essa parceria faz sentido."
+                }
             }
-        },
-        {
-            question: "Para uma collab focada em fortalecer o capital de marca, quais destas métricas é a mais relevante?",
-            options: ["Vendas diretas do produto", "Custo por Clique (CPC) nos anúncios", "Análise de Sentimento e 'Share of Voice'", "Taxa de abertura de e-mail marketing"],
-            correctAnswerIndex: 2,
-            feedback: {
-                correct: "Correto! Brand Equity é medido pela percepção da marca, tornando a análise de sentimento o indicador mais direto.",
-                incorrect: "Não exatamente. Vendas são importantes (ROI), mas o *Brand Equity* (valor da marca) é medido pela *percepção* e sentimento do público."
-            }
-        },
-        {
-            question: "Qual é o principal diferencial de um modelo de 'Colaboração' em relação a um simples 'Licenciamento'?",
-            options: ["Colaboração é sempre mais barato", "Licenciamento envolve apenas o logo, Colaboração envolve o produto", "Colaboração implica na criação de um produto/serviço novo e conjunto", "Apenas marcas de luxo fazem Colaborações"],
-            correctAnswerIndex: 2,
-            feedback: {
-                correct: "Exato! Licenciamento é 'alugar' a marca, Colaboração é 'criar junto', gerando valor mútuo e inovação.",
-                incorrect: "Na verdade, o licenciamento é apenas o uso da marca, enquanto o colaboração envolve duas marcas se unindo para criar um produto novo e compartilhado."
-            }
-        },
-        {
-            question: "Ao negociar uma parceria, qual é o erro mais comum que as marcas 'iniciantes' cometem?",
-            options: ["Focar excessivamente na divisão de receita imediata", "Ser transparente demais sobre suas fraquezas", "Pedir garantias legais excessivas", "Não ter um plano de marketing definido"],
-            correctAnswerIndex: 0,
-            feedback: {
-                correct: "Precisamente. Muitas focam no ganho de curto prazo e esquecem o valor estratégico (awareness, posicionamento) que é o maior ativo de uma boa collab.",
-                incorrect: "Pense de novo. O erro mais comum é focar apenas no dinheiro imediato (receita) e esquecer o valor estratégico de longo prazo, como o ganho de audiência e posicionamento."
-            }
-        },
-        {
-            question: "Qual elemento é fundamental para garantir que uma das marcas participantes da collab não 'canibalize' o público da outra?",
-            options: ["Lançar em datas completamente diferentes", "Usar exatamente a mesma comunicação", "Uma clara definição de 'storytelling' que una as duas marcas", "Oferecer o produto apenas para clientes existentes"],
-            correctAnswerIndex: 2,
-            feedback: {
-                correct: "Correto! O 'storytelling' é a cola que justifica a parceria para o público, mostrando por que as duas marcas fazem sentido juntas.",
-                incorrect: "Não é bem por aí. A 'cola' que une as marcas e evita a canibalização é um bom 'storytelling', que explica ao público *por que* essa parceria faz sentido."
-            }
-        }
-    ];
+        ];
 
-    // --- VARIÁVEIS DE ESTADO ---
-    let currentQuestionIndex = 0;
-    let score = 0;
+        // --- VARIÁVEIS DE ESTADO ---
+        let currentQuestionIndex = 0;
+        let score = 0;
 
-    // --- SELETORES DE ELEMENTOS DOM ---
-    const startButton = document.querySelector('.cta-button[href="#quiz-section"]');
-    const quizSection = document.getElementById('quiz-section');
-    const resultsSection = document.getElementById('results-section');
-    const questionText = document.getElementById('question-text');
-    const answerOptions = document.getElementById('answer-options');
-    const feedbackText = document.getElementById('feedback-text');
-    const progressBar = document.getElementById('progress-bar');
-    const progressText = document.getElementById('progress-text');
-    const leadForm = document.getElementById('lead-form');
-    const nextQuestionButton = document.getElementById('next-question-button');
+        // --- SELETORES DE ELEMENTOS DOM ---
+        const startButton = document.querySelector('.cta-button[href="#quiz-section"]');
+        const quizSection = document.getElementById('quiz-section');
+        const resultsSection = document.getElementById('results-section');
+        const questionText = document.getElementById('question-text');
+        const answerOptions = document.getElementById('answer-options');
+        const feedbackText = document.getElementById('feedback-text');
+        const progressBar = document.getElementById('progress-bar');
+        const progressText = document.getElementById('progress-text');
+        const leadForm = document.getElementById('lead-form');
+        const nextQuestionButton = document.getElementById('next-question-button');
 
-    // --- FUNÇÕES PRINCIPAIS ---
+        // --- FUNÇÕES PRINCIPAIS ---
 
-    function startQuiz(event) {
-        event.preventDefault();
-        quizSection.classList.remove('hidden');
-        quizSection.scrollIntoView({ behavior: 'smooth' });
-        displayQuestion();
-        gtag('event', 'quiz_start');
-    }
-
-    function displayQuestion() {
-        const currentQuestion = quizData[currentQuestionIndex];
-        questionText.innerHTML = currentQuestion.question;
-
-        answerOptions.innerHTML = '';
-        feedbackText.innerHTML = '';
-
-        nextQuestionButton.classList.add('hidden');
-        
-        currentQuestion.options.forEach((option, index) => {
-            const optionElement = document.createElement('button');
-            optionElement.classList.add('answer-option');
-            optionElement.innerHTML = option;
-            optionElement.dataset.index = index;
-            optionElement.addEventListener('click', selectAnswer);
-            answerOptions.appendChild(optionElement);
-        });
-
-        const progressPercent = ((currentQuestionIndex + 1) / quizData.length) * 100;
-        progressBar.style.width = `${progressPercent}%`;
-        progressText.innerHTML = `Pergunta ${currentQuestionIndex + 1} de ${quizData.length}`;
-    }
-
-    /**
-     * Lida com a seleção de uma resposta.
-     */
-    function selectAnswer(event) {
-        const selectedIndex = parseInt(event.target.dataset.index);
-        const correctIndex = quizData[currentQuestionIndex].correctAnswerIndex;
-        const currentFeedback = quizData[currentQuestionIndex].feedback;
-
-        // *** ESTA É A VARIÁVEL CORRIGIDA QUE FALTAVA ***
-        const isCorrect = (selectedIndex === correctIndex);
-
-        const allOptions = document.querySelectorAll('.answer-option');
-        allOptions.forEach(option => option.classList.add('disabled'));
-
-        // LÓGICA DE FEEDBACK
-        if (isCorrect) { 
-            score++;
-            event.target.classList.add('correct');
-            feedbackText.innerHTML = currentFeedback.correct;
-        } else {
-            event.target.classList.add('incorrect');
-            allOptions[correctIndex].classList.add('correct');
-            feedbackText.innerHTML = currentFeedback.incorrect;
-        }
-
-        // *** ESTE É O BLOCO 'GTAG' CORRIGIDO ***
-        gtag('event', 'answer_selected', {
-            'question_number': currentQuestionIndex + 1, 
-            'is_correct': isCorrect, 
-            'selected_option': selectedIndex 
-        });
-
-        // --- O restante da lógica permanece o mesmo ---
-
-        // Verifica se é a última pergunta para mudar o texto do botão
-        if (currentQuestionIndex === quizData.length - 1) {
-            nextQuestionButton.innerHTML = "Ver Resultados";
-        } else {
-            nextQuestionButton.innerHTML = "Próxima Pergunta";
-        }
-        
-        // Mostra o botão
-        nextQuestionButton.classList.remove('hidden');
-    }
-
-    /**
-     * FUNÇÃO PARA AVANÇAR: Chamada ao clicar no botão "Próxima Pergunta".
-     */
-    function goToNextQuestion() {
-        currentQuestionIndex++;
-
-        if (currentQuestionIndex < quizData.length) {
+        function startQuiz(event) {
+            event.preventDefault();
+            quizSection.classList.remove('hidden');
+            quizSection.scrollIntoView({ behavior: 'smooth' });
             displayQuestion();
-        } else {
-            showResults();
+            gtag('event', 'quiz_start');
         }
-    }
 
-    /**
-     * Calcula e exibe a seção de resultados.
-     */
-    function showResults() {
-        quizSection.classList.add('hidden');
-        resultsSection.classList.remove('hidden');
+        function displayQuestion() {
+            const currentQuestion = quizData[currentQuestionIndex];
+            questionText.innerHTML = currentQuestion.question;
 
-        let segment, headline, text;
+            answerOptions.innerHTML = '';
+            feedbackText.innerHTML = '';
 
-        if (score <= 3) {
-            segment = 'Explorador';
-            headline = `Você acertou ${score} de 5. Sua jornada no universo das collabs está apenas começando.`;
-            text = "Identificar o potencial é o primeiro passo. O próximo é construir a estratégia correta. O universo das parcerias é vasto e cheio de nuances, e estamos aqui para ser o seu guia em cada etapa.";
-        } else {
-            segment = 'Estrategista';
-            headline = `Excelente! Você acertou ${score} de 5, mostrando um conhecimento avançado sobre collabs.`;
-            text = "Você já entende a teoria e os mecanismos por trás de uma parceria de sucesso. Agora, o desafio é a execução: encontrar o parceiro ideal, navegar as negociações e garantir um ROI real. Vamos acelerar esse processo.";
+            nextQuestionButton.classList.add('hidden');
+            
+            currentQuestion.options.forEach((option, index) => {
+                const optionElement = document.createElement('button');
+                optionElement.classList.add('answer-option');
+                optionElement.innerHTML = option;
+                optionElement.dataset.index = index;
+                optionElement.addEventListener('click', selectAnswer);
+                answerOptions.appendChild(optionElement);
+            });
+
+            const progressPercent = ((currentQuestionIndex + 1) / quizData.length) * 100;
+            progressBar.style.width = `${progressPercent}%`;
+            progressText.innerHTML = `Pergunta ${currentQuestionIndex + 1} de ${quizData.length}`;
         }
-        
-        gtag('event', 'quiz_complete', {
-            'final_score': score, // Envia a pontuação final
-            'user_segment': segment // Envia o perfil (Explorador/Estrategista)
-        });
 
-        document.getElementById('result-headline').innerHTML = headline;
-        document.getElementById('result-text').innerHTML = text;
-        document.getElementById('hidden-segment').value = segment;
-        resultsSection.scrollIntoView({ behavior: 'smooth' });
-    }
+        function selectAnswer(event) {
+            const selectedIndex = parseInt(event.target.dataset.index);
+            const correctIndex = quizData[currentQuestionIndex].correctAnswerIndex;
+            const currentFeedback = quizData[currentQuestionIndex].feedback;
+            const isCorrect = (selectedIndex === correctIndex);
+            const allOptions = document.querySelectorAll('.answer-option');
+            allOptions.forEach(option => option.classList.add('disabled'));
 
-    // --- OUVINTES DE EVENTOS (EVENT LISTENERS) ---
-    startButton.addEventListener('click', startQuiz);
-    nextQuestionButton.addEventListener('click', goToNextQuestion);
-    
-    leadForm.addEventListener('submit', function(event) {
-        event.preventDefault(); // Impede o recarregamento da página
-        
-        const submitButton = leadForm.querySelector('button[type="submit"]');
-        const formData = new FormData(leadForm); // Pega todos os dados do formulário
-        
-        // Mostra um feedback de "Enviando..."
-        submitButton.disabled = true;
-        submitButton.innerHTML = "Enviando...";
-
-        // Usa o Fetch para enviar os dados para o Formspree
-        fetch(leadForm.action, {
-            method: leadForm.method,
-            body: formData,
-            headers: {
-                'Accept': 'application/json'
-            }
-        })
-        .then(response => {
-            // Se deu certo, mostra o "Obrigado"
-            if (response.ok) {
-                submitButton.innerHTML = "Obrigado! Em breve entraremos em contato.";
-                leadForm.reset(); // Limpa o formulário
-                gtag('event', 'form_submit', { 'form_name': 'leads' });
+            if (isCorrect) { 
+                score++;
+                event.target.classList.add('correct');
+                feedbackText.innerHTML = currentFeedback.correct;
             } else {
-                // Se deu erro na rede
+                event.target.classList.add('incorrect');
+                allOptions[correctIndex].classList.add('correct');
+                feedbackText.innerHTML = currentFeedback.incorrect;
+            }
+
+            gtag('event', 'answer_selected', {
+                'question_number': currentQuestionIndex + 1, 
+                'is_correct': isCorrect, 
+                'selected_option': selectedIndex 
+            });
+
+            if (currentQuestionIndex === quizData.length - 1) {
+                nextQuestionButton.innerHTML = "Ver Resultados";
+            } else {
+                nextQuestionButton.innerHTML = "Próxima Pergunta";
+            }
+            
+            nextQuestionButton.classList.remove('hidden');
+        }
+
+        function goToNextQuestion() {
+            currentQuestionIndex++;
+            if (currentQuestionIndex < quizData.length) {
+                displayQuestion();
+            } else {
+                showResults();
+            }
+        }
+
+        function showResults() {
+            quizSection.classList.add('hidden');
+            resultsSection.classList.remove('hidden');
+
+            let segment, headline, text;
+
+            if (score <= 3) {
+                segment = 'Explorador';
+                headline = `Você acertou ${score} de 5. Sua jornada no universo das collabs está apenas começando.`;
+                text = "Identificar o potencial é o primeiro passo. O próximo é construir a estratégia correta. O universo das parcerias é vasto e cheio de nuances, e estamos aqui para ser o seu guia em cada etapa.";
+            } else {
+                segment = 'Estrategista';
+                headline = `Excelente! Você acertou ${score} de 5, mostrando um conhecimento avançado sobre collabs.`;
+                text = "Você já entende a teoria e os mecanismos por trás de uma parceria de sucesso. Agora, o desafio é a execução: encontrar o parceiro ideal, navegar as negociações e garantir um ROI real. Vamos acelerar esse processo.";
+            }
+            
+            gtag('event', 'quiz_complete', {
+                'final_score': score, 
+                'user_segment': segment 
+            });
+
+            document.getElementById('result-headline').innerHTML = headline;
+            document.getElementById('result-text').innerHTML = text;
+            document.getElementById('hidden-segment').value = segment;
+            resultsSection.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // --- OUVINTES DE EVENTOS (EVENT LISTENERS) ---
+        startButton.addEventListener('click', startQuiz);
+        nextQuestionButton.addEventListener('click', goToNextQuestion);
+        
+        leadForm.addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            const submitButton = leadForm.querySelector('button[type="submit"]');
+            const formData = new FormData(leadForm); 
+            
+            submitButton.disabled = true;
+            submitButton.innerHTML = "Enviando...";
+
+            fetch(leadForm.action, {
+                method: leadForm.method,
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    submitButton.innerHTML = "Obrigado! Em breve entraremos em contato.";
+                    leadForm.reset(); 
+                    gtag('event', 'form_submit', { 'form_name': 'leads' });
+                } else {
+                    submitButton.disabled = false;
+                    submitButton.innerHTML = "Ocorreu um erro. Tente novamente.";
+                }
+            })
+            .catch(error => {
                 submitButton.disabled = false;
                 submitButton.innerHTML = "Ocorreu um erro. Tente novamente.";
-            }
-        })
-        .catch(error => {
-            // Se deu qualquer outro erro
-            submitButton.disabled = false;
-            submitButton.innerHTML = "Ocorreu um erro. Tente novamente.";
+            });
         });
     });
-
-});
     </script>
 
 </body>
-
 </html>
-
-
-
