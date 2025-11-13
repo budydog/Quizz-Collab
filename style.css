@@ -31,7 +31,7 @@ body {
 
 /* --- Estrutura e Utilitários --- */
 .section {
-    padding: 80px 20px;
+    padding: 40px 20px; /* <-- ALTERAÇÃO APLICADA (era 80px) */
     text-align: center;
 }
 
@@ -46,10 +46,10 @@ body {
 
 /* --- Estilos de Cabeçalho (Hero) - ATUALIZADO --- */
 #hero {
-    /* Removido o gradiente para resolver a "fadiga visual"  */
+    /* Removido o gradiente para resolver a "fadiga visual" */
     background-color: var(--bg-color); 
     color: var(--text-color);
-    min-height: 80vh;
+    min-height: 60vh; /* <-- ALTERAÇÃO APLICADA (era 80vh) */
     display: flex;
     align-items: center;
     justify-content: center;
