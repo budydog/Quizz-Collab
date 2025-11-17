@@ -252,15 +252,18 @@
 
             let segment, headline, text;
 
-            if (score <= 3) {
-                segment = 'Explorador';
-                headline = `Você acertou ${score} de 5. Sua jornada no universo das collabs está apenas começando.`;
-                text = "Identificar o potencial é o primeiro passo. O próximo é construir a estratégia correta. O universo das parcerias é vasto e cheio de nuances, e estamos aqui para ser o seu guia em cada etapa.";
-            } else {
-                segment = 'Estrategista';
-                headline = `Excelente! Você acertou ${score} de 5, mostrando um conhecimento avançado sobre collabs.`;
-                text = "Você já entende a teoria e os mecanismos por trás de uma parceria de sucesso. Agora, o desafio é a execução: encontrar o parceiro ideal, navegar as negociações e garantir um ROI real. Vamos acelerar esse processo.";
-            }
+        // *** AQUI ESTÃO OS TEXTOS ATUALIZADOS ***
+        if (score <= 3) {
+            segment = 'Explorador';
+            headline = `Você acertou ${score} de 5. Seu perfil é 'Explorador'.`;
+            // Texto 1 (Opção 2) com CTA
+            text = "Você identificou o potencial, mas o universo das parcerias é vasto e cheio de nuances. O próximo passo é construir a estratégia correta.<br><br><strong>Evite os erros mais comuns: preencha o formulário para que um especialista possa ser o seu guia.</strong>";
+        } else {
+            segment = 'Estrategista';
+            headline = `Excelente! Você acertou ${score} de 5. Seu perfil é 'Estrategista'.`;
+            // Texto 2 (Opção 2) com CTA
+            text = "Você já entende a teoria, mas sabe que o desafio é a execução: encontrar o parceiro ideal e garantir o ROI.<br><br><strong>Transforme sua estratégia em resultados reais: preencha o formulário e deixe nossos especialistas acelerarem esse processo para você.</strong>";
+        }
             
             gtag('event', 'quiz_complete', {
                 'final_score': score, 
@@ -312,3 +315,4 @@
 
 </body>
 </html>
+
