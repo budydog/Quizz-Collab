@@ -4,7 +4,7 @@
     <meta name="google-site-verification" content="ljncDtzhyUzhJAYlXEM_Q7XqDCz5uwZ4zgwV092Atf4" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2Brands - Diagnóstico de Estratégia em Collabs</title>
+    <title>2Brands - Diagnóstico de Conhecimento em Collabs</title>
     
     <link rel="icon" href="logo.png" type="image/png">
     
@@ -25,7 +25,7 @@
     <header id="hero" class="section">
         <div class="container">
             <h1>Colaborações entre marcas (collabs) movem bilhões de reais. A sua marca está preparada?</h1>
-            <p class="subtitle">Esqueça formulários genéricos. Receba um diagnóstico instantâneo da sua maturidade em parcerias. Responda 5 perguntas e descubra seu perfil.</p>
+            <p class="subtitle">Descubra seu nível de conhecimento sobre collabs respondendo 5 perguntinhas simples.</p>
             <a href="#quiz-section" class="cta-button">Responda já</a>
         </div>
     </header>
@@ -36,14 +36,14 @@
             <div class="container">
                 <img src="logo.png" alt="2Brands one purpose." class="section-logo">
                 
-                <h2>2Brands: Da Estratégia à Execução. Sem Complicações.</h2>
-                <p>Nós transformamos o potencial de uma parceria em resultados mensuráveis. Cuidamos de toda a complexidade — da prospecção do parceiro ideal e negociação de contratos à gestão da campanha e análise de ROI — para que você possa focar no crescimento da sua marca. Somos o parceiro end-to-end que sua verdadeira collab precisa.</p>  
+                <h2>2Brands: Conectando marcas através de ideias </h2>
+                <p>A 2brands opera como uma consultoria B2B especializada em parcerias estratégicas para empresas do Middle Market. Atuamos como arquitetos de suporte operacional e criativo, preenchendo a lacuna deixada por agências generalistas ao oferecer uma solução end-to-end: do diagnóstico estratégico à mensuração final de resultados.</p>  
             </div>
             </section>
 
         <section id="quiz-section" class="section hidden">
             <div class="container quiz-container">
-                <h2>Diagnóstico de Estratégia em Collabs</h2>
+                <h2>Diagnóstico de Conhecimento em Collabs</h2>
                 <div id="progress-bar-container">
                     <div id="progress-bar"></div>
                     <span id="progress-text">Pergunta 1 de 5</span>
@@ -255,14 +255,14 @@
         // *** AQUI ESTÃO OS TEXTOS ATUALIZADOS ***
         if (score <= 3) {
             segment = 'Explorador';
-            headline = `Você acertou ${score} de 5. Seu perfil é 'Explorador'.`;
+            headline = `Você acertou ${score} de 5.`;
             // Texto 1 (Opção 2) com CTA
-            text = "Você identificou o potencial, mas o universo das parcerias é vasto e cheio de nuances. O próximo passo é construir a estratégia correta.<br><br><strong>Evite os erros mais comuns: preencha o formulário para que um especialista possa ser o seu guia.</strong>";
+            text = "Você quer fazer uma collab, mas o universo das parcerias é vasto e cheio de nuances. O próximo passo é construir a estratégia correta.<br><br><strong>Evite os erros mais comuns: preencha o formulário para que um especialista 2brands possa ser o seu guia.</strong>";
         } else {
             segment = 'Estrategista';
-            headline = `Excelente! Você acertou ${score} de 5. Seu perfil é 'Estrategista'.`;
+            headline = `Excelente! Você acertou ${score} de 5.`;
             // Texto 2 (Opção 2) com CTA
-            text = "Você já entende a teoria, mas sabe que o desafio é a execução: encontrar o parceiro ideal e garantir o ROI.<br><br><strong>Transforme sua estratégia em resultados reais: preencha o formulário e deixe nossos especialistas acelerarem esse processo para você.</strong>";
+            text = "Parabéns, você já tem um ótimo conhecimento da teoria.<br><br><strong>Transforme seu conhecimento em resultados reais: preencha o formulário e deixe nossos especialistas acelerarem esse processo para você.</strong>";
         }
             
             gtag('event', 'quiz_complete', {
@@ -315,4 +315,5 @@
 
 </body>
 </html>
+
 
