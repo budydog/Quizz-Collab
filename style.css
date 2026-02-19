@@ -161,55 +161,62 @@ body {
     border-radius: 8px;
 }
 
-/* --- NOVO RODAPÉ (PROFISSIONAL) --- */
+/* --- NOVO RODAPÉ (VERSÃO ICONS ONLY) --- */
 .footer-container {
-    background-color: #fcfcfc;
-    padding: 60px 20px 30px;
+    background-color: #ffffff;
+    padding: 50px 20px 30px;
     border-top: 1px solid #eee;
     margin-top: 50px;
 }
 
 .footer-content {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 40px;
+    flex-direction: column;
+    align-items: center; /* Centraliza tudo para um look mais clean */
+    text-align: center;
 }
 
 .footer-section h4 {
     text-transform: uppercase;
-    font-size: 13px;
-    letter-spacing: 1.5px;
-    margin-bottom: 20px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    color: #888;
 }
 
 .social-icons {
     display: flex;
-    gap: 20px;
+    gap: 35px; /* Mais espaço entre os ícones já que agora são a única info */
 }
 
 .social-icons a {
-    font-size: 24px;
+    font-size: 28px; /* Ícones levemente maiores */
     color: #333;
-    transition: 0.3s;
+    transition: transform 0.3s, color 0.3s;
 }
 
-.social-icons a:hover { color: var(--primary-accent); }
-
-.footer-section p, .footer-section a {
-    font-size: 14px;
-    color: #666;
-    text-decoration: none;
+.social-icons a:hover {
+    transform: translateY(-3px);
+    color: var(--primary-accent); /* Magenta da 2Brands no hover */
 }
+
+/* Cor específica do WhatsApp no hover (opcional, se quiser manter tudo preto, ignore) */
+/* .social-icons a[aria-label="WhatsApp"]:hover { color: #25D366; } */
 
 .footer-bottom {
     text-align: center;
     margin-top: 40px;
-    font-size: 12px;
-    color: #999;
+    font-size: 11px;
+    color: #bbb;
+    letter-spacing: 1px;
 }
 
-.section-logo { max-width: 180px; margin-bottom: 20px; }
+/* Ajuste de responsividade */
+@media (max-width: 768px) {
+    .social-icons {
+        gap: 30px;
+    }
+}
 
 /* --- Responsividade --- */
 @media (min-width: 768px) {
@@ -224,3 +231,4 @@ body {
     }
     .social-icons { justify-content: center; }
 }
+
