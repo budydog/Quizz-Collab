@@ -9,9 +9,12 @@
     <link rel="icon" href="logo.png" type="image/png">
     
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-2DXSQR9K2K"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -31,15 +34,13 @@
     </header>
 
     <main>
-
         <section id="value-prop-section" class="section">
             <div class="container">
                 <img src="logo.png" alt="2Brands one purpose." class="section-logo">
-                
-                <h2>2Brands: Conectando marcas através de ideias </h2>
+                <h2>2Brands: Conectando marcas através de ideias</h2>
                 <p>A 2brands opera como uma consultoria B2B especializada em parcerias estratégicas para empresas do Middle Market. Atuamos como arquitetos de suporte operacional e criativo, preenchendo a lacuna deixada por agências generalistas ao oferecer uma solução end-to-end: do diagnóstico estratégico à mensuração final de resultados.</p>  
             </div>
-            </section>
+        </section>
 
         <section id="quiz-section" class="section hidden">
             <div class="container quiz-container">
@@ -50,10 +51,8 @@
                 </div>
                 <div id="quiz-card">
                     <h3 id="question-text"></h3>
-                    <div id="answer-options" class="answer-grid">
-                        </div>
+                    <div id="answer-options" class="answer-grid"></div>
                     <p id="feedback-text" class="feedback"></p>
-                    
                     <button id="next-question-button" class="cta-button hidden">Próxima Pergunta</button>
                 </div>
             </div>
@@ -79,33 +78,41 @@
                         <div class="form-group">
                             <input type="text" id="jobTitle" name="jobTitle" placeholder="Cargo" required>
                         </div>
-                        
                         <input type="hidden" id="hidden-segment" name="segmento" value="">
-                        
                         <button type="submit" class="cta-button final-cta">Fale conosco</button>
                     </form>
                 </div>
             </div>
         </section>
-
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 2Brands. Todos os direitos reservados.</p>
+    <footer class="footer-container">
+        <div class="container footer-content">
+            <div class="footer-section">
+                <h4>Nos Conheça</h4>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/2brands.cc/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/2brandsagencia/posts/?feedView=all" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Entre em Contato</h4>
+                <p>E-mail: <a href="mailto:contato@2brands.com.br">contato@2brands.com.br</a></p>
+                <p>WhatsApp: <a href="https://wa.me/5517997039771" target="_blank">(17) 99703-9771</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 2Brands - Todos os direitos reservados.
         </div>
     </footer>
 
     <script>
-    /*
-    * =================================================================
-    * LÓGICA DE INTERAÇÃO (COM CORREÇÃO ORTOGRÁFICA)
-    * =================================================================
-    */
-
     document.addEventListener('DOMContentLoaded', () => {
-
-        // --- ESTRUTURA DE DADOS DO QUIZ ---
         const quizData = [
             {
                 question: "Além da sobreposição de público-alvo, qual é o critério mais crucial para garantir a autenticidade e o sucesso de uma collab?",
@@ -113,17 +120,16 @@
                 correctAnswerIndex: 1,
                 feedback: {
                     correct: "Correto! O alinhamento de valores é a base que sustenta a credibilidade da parceria a longo prazo.",
-                    incorrect: "Quase lá. Embora a viralização seja ótima, o alinhamento de valores é o que garante que a parceria pareça autêntica e não apenas uma 'caça-cliques'."
+                    incorrect: "Quase lá. Embora a viralização seja ótima, o alinhamento de valores é o que garante que a parceria pareça autêntica."
                 }
             },
             {
-                // CORREÇÃO ORTOGRÁFICA (Baseado no Achado 4)
                 question: "Para uma collab focada em fortalecer o capital de marca, qual destas métricas é a mais relevante?",
                 options: ["Vendas diretas do produto", "Custo por Clique (CPC) nos anúncios", "Análise de Sentimento e 'Share of Voice'", "Taxa de abertura de e-mail marketing"],
                 correctAnswerIndex: 2,
                 feedback: {
-                    correct: "Correto! Brand Equity é medido pela percepção da marca, tornando a análise de sentimento o indicador mais direto.",
-                    incorrect: "Não exatamente. Vendas são importantes (ROI), mas o *Brand Equity* (valor da marca) é medido pela *percepção* e sentimento do público."
+                    correct: "Correto! Brand Equity é medido pela percepção da marca.",
+                    incorrect: "Não exatamente. O Brand Equity é medido pela percepção e sentimento do público."
                 }
             },
             {
@@ -131,8 +137,8 @@
                 options: ["Colaboração é sempre mais barato", "Licenciamento envolve apenas o logo, Colaboração envolve o produto", "Colaboração implica na criação de um produto/serviço novo e conjunto", "Apenas marcas de luxo fazem Colaborações"],
                 correctAnswerIndex: 2,
                 feedback: {
-                    correct: "Exato! Licenciamento é 'alugar' a marca, Colaboração é 'criar junto', gerando valor mútuo e inovação.",
-                    incorrect: "Na verdade, o licenciamento é apenas o uso da marca, enquanto o colaboração envolve duas marcas se unindo para criar um produto novo e compartilhado."
+                    correct: "Exato! Colaboração é 'criar junto', gerando valor mútuo.",
+                    incorrect: "Na verdade, a colaboração envolve duas marcas se unindo para criar algo novo."
                 }
             },
             {
@@ -140,26 +146,24 @@
                 options: ["Focar excessivamente na divisão de receita imediata", "Ser transparente demais sobre suas fraquezas", "Pedir garantias legais excessivas", "Não ter um plano de marketing definido"],
                 correctAnswerIndex: 0,
                 feedback: {
-                    correct: "Precisamente. Muitas focam no ganho de curto prazo e esquecem o valor estratégico (awareness, posicionamento) que é o maior ativo de uma boa collab.",
-                    incorrect: "Pense de novo. O erro mais comum é focar apenas no dinheiro imediato (receita) e esquecer o valor estratégico de longo prazo, como o ganho de audiência e posicionamento."
+                    correct: "Precisamente. Muitas esquecem o valor estratégico de longo prazo.",
+                    incorrect: "O erro mais comum é focar apenas no dinheiro imediato e esquecer o posicionamento."
                 }
             },
             {
                 question: "Qual elemento é fundamental para garantir que uma das marcas participantes da collab não 'canibalize' o público da outra?",
-                options: ["Lançar em datas completamente diferentes", "Usar exatamente a mesma comunicação", "Uma clara definição de 'storytelling' que una as duas marcas", "Oferecer o produto apenas para clientes existentes"],
+                options: ["Lançar em das datas diferentes", "Usar a mesma comunicação", "Uma clara definição de 'storytelling' que una as duas marcas", "Oferecer o produto apenas para clientes existentes"],
                 correctAnswerIndex: 2,
                 feedback: {
-                    correct: "Correto! O 'storytelling' é a cola que justifica a parceria para o público, mostrando por que as duas marcas fazem sentido juntas.",
-                    incorrect: "Não é bem por aí. A 'cola' que une as marcas e evita a canibalização é um bom 'storytelling', que explica ao público *por que* essa parceria faz sentido."
+                    correct: "Correto! O storytelling justifica a parceria para o público.",
+                    incorrect: "O storytelling é a 'cola' que explica por que essa parceria faz sentido."
                 }
             }
         ];
 
-        // --- VARIÁVEIS DE ESTADO ---
         let currentQuestionIndex = 0;
         let score = 0;
 
-        // --- SELETORES DE ELEMENTOS DOM ---
         const startButton = document.querySelector('.cta-button[href="#quiz-section"]');
         const quizSection = document.getElementById('quiz-section');
         const resultsSection = document.getElementById('results-section');
@@ -170,8 +174,6 @@
         const progressText = document.getElementById('progress-text');
         const leadForm = document.getElementById('lead-form');
         const nextQuestionButton = document.getElementById('next-question-button');
-
-        // --- FUNÇÕES PRINCIPAIS ---
 
         function startQuiz(event) {
             event.preventDefault();
@@ -184,10 +186,8 @@
         function displayQuestion() {
             const currentQuestion = quizData[currentQuestionIndex];
             questionText.innerHTML = currentQuestion.question;
-
             answerOptions.innerHTML = '';
             feedbackText.innerHTML = '';
-
             nextQuestionButton.classList.add('hidden');
             
             currentQuestion.options.forEach((option, index) => {
@@ -222,18 +222,8 @@
                 feedbackText.innerHTML = currentFeedback.incorrect;
             }
 
-            gtag('event', 'answer_selected', {
-                'question_number': currentQuestionIndex + 1, 
-                'is_correct': isCorrect, 
-                'selected_option': selectedIndex 
-            });
-
-            if (currentQuestionIndex === quizData.length - 1) {
-                nextQuestionButton.innerHTML = "Ver Resultados";
-            } else {
-                nextQuestionButton.innerHTML = "Próxima Pergunta";
-            }
-            
+            gtag('event', 'answer_selected', { 'question_number': currentQuestionIndex + 1, 'is_correct': isCorrect });
+            nextQuestionButton.innerHTML = currentQuestionIndex === quizData.length - 1 ? "Ver Resultados" : "Próxima Pergunta";
             nextQuestionButton.classList.remove('hidden');
         }
 
@@ -249,104 +239,54 @@
         function showResults() {
             quizSection.classList.add('hidden');
             resultsSection.classList.remove('hidden');
-
             let segment, headline, text;
 
-        // *** AQUI ESTÃO OS TEXTOS ATUALIZADOS ***
-        if (score <= 3) {
-            segment = 'Explorador';
-            headline = `Você acertou ${score} de 5.`;
-            // Texto 1 (Opção 2) com CTA
-            text = "Você quer fazer uma collab, mas o universo das parcerias é vasto e cheio de nuances. O próximo passo é construir a estratégia correta.<br><br><strong>Evite os erros mais comuns: preencha o formulário para que um especialista 2brands possa ser o seu guia.</strong>";
-        } else {
-            segment = 'Estrategista';
-            headline = `Excelente! Você acertou ${score} de 5.`;
-            // Texto 2 (Opção 2) com CTA
-            text = "Parabéns, você já tem um ótimo conhecimento da teoria.<br><br><strong>Transforme seu conhecimento em resultados reais: preencha o formulário e deixe nossos especialistas acelerarem esse processo para você.</strong>";
-        }
+            if (score <= 3) {
+                segment = 'Explorador';
+                headline = `Você acertou ${score} de 5.`;
+                text = "Você quer fazer uma collab, mas o universo das parcerias é cheio de nuances. O próximo passo é construir a estratégia correta.<br><br><strong>Evite os erros mais comuns: preencha o formulário para que um especialista 2brands possa ser o seu guia.</strong>";
+            } else {
+                segment = 'Estrategista';
+                headline = `Excelente! Você acertou ${score} de 5.`;
+                text = "Parabéns, você já tem um ótimo conhecimento da teoria.<br><br><strong>Transforme seu conhecimento em resultados reais: preencha o formulário e deixe nossos especialistas acelerarem esse processo para você.</strong>";
+            }
             
-            gtag('event', 'quiz_complete', {
-                'final_score': score, 
-                'user_segment': segment 
-            });
-
+            gtag('event', 'quiz_complete', { 'final_score': score, 'user_segment': segment });
             document.getElementById('result-headline').innerHTML = headline;
             document.getElementById('result-text').innerHTML = text;
             document.getElementById('hidden-segment').value = segment;
             resultsSection.scrollIntoView({ behavior: 'smooth' });
         }
 
-        // --- OUVINTES DE EVENTOS (EVENT LISTENERS) ---
         startButton.addEventListener('click', startQuiz);
         nextQuestionButton.addEventListener('click', goToNextQuestion);
         
         leadForm.addEventListener('submit', function(event) {
             event.preventDefault(); 
             const submitButton = leadForm.querySelector('button[type="submit"]');
-            const formData = new FormData(leadForm); 
-            
+            const formData = new FormData(leadForm);
             submitButton.disabled = true;
             submitButton.innerHTML = "Enviando...";
 
             fetch(leadForm.action, {
                 method: leadForm.method,
                 body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            })
-            .then(response => {
+                headers: { 'Accept': 'application/json' }
+            }).then(response => {
                 if (response.ok) {
                     submitButton.innerHTML = "Obrigado! Em breve entraremos em contato.";
-                    leadForm.reset(); 
+                    leadForm.reset();
                     gtag('event', 'form_submit', { 'form_name': 'leads' });
                 } else {
                     submitButton.disabled = false;
-                    submitButton.innerHTML = "Ocorreu um erro. Tente novamente.";
+                    submitButton.innerHTML = "Erro. Tente novamente.";
                 }
-            })
-            .catch(error => {
+            }).catch(() => {
                 submitButton.disabled = false;
-                submitButton.innerHTML = "Ocorreu um erro. Tente novamente.";
+                submitButton.innerHTML = "Erro. Tente novamente.";
             });
-            <footer class="footer-container">
-    <div class="footer-content">
-        <div class="footer-section">
-            <h4>Nos Conheça</h4>
-            <div class="social-icons">
-                <a href="https://www.instagram.com/2brands.cc/" 
-                   target="_blank" 
-                   rel="noopener noreferrer" 
-                   aria-label="Instagram da 2Brands">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                
-                <a href="https://www.linkedin.com/company/2brandsagencia/posts/?feedView=all" 
-                   target="_blank" 
-                   rel="noopener noreferrer" 
-                   aria-label="LinkedIn da 2Brands">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-            </div>
-        </div>
-
-        <div class="footer-section">
-            <h4>Entre em Contato</h4>
-            <p>E-mail: <a href="mailto:contato@2brands.com.br">contato@2brands.com.br</a></p>
-            <p>WhatsApp: <a href="https://wa.me/5517997039771" target="_blank">(17) 99703-9771</a></p>
-        </div>
-    </div>
-    
-    <div class="footer-bottom">
-        &copy; 2026 2Brands - Todos os direitos reservados.
-    </div>
-</footer>
         });
     });
     </script>
-
 </body>
 </html>
-
-
-
