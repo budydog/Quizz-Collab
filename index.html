@@ -7,26 +7,26 @@
     <title>2Brands - Diagnóstico de Conhecimento em Collabs</title>
     
     <link rel="icon" href="logo.png" type="image/png">
-    
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     
     <style>
-        /* Estilização da nota de privacidade integrada */
+        /* Regras essenciais para o funcionamento do script */
+        .hidden { display: none !important; }
+        
         .notice-container {
             background-color: #f9f9f9;
-            border-left: 4px solid #e60000; /* Vermelho principal 2Brands */
+            border-left: 4px solid #e60000;
             padding: 15px;
             margin-bottom: 20px;
             font-size: 0.85rem;
             color: #555;
             border-radius: 4px;
             line-height: 1.4;
-            display: none; /* Inicia oculto */
+            display: none;
             animation: fadeIn 0.5s ease;
         }
         @keyframes fadeIn {
@@ -49,7 +49,7 @@
         <div class="container">
             <h1>Colaborações entre marcas (collabs) movem bilhões de reais. A sua marca está preparada?</h1>
             <p class="subtitle">Descubra seu nível de conhecimento sobre collabs respondendo 5 perguntinhas simples.</p>
-            <a href="#quiz-section" class="cta-button">Responda já</a>
+            <a href="#quiz-section" id="start-quiz-btn" class="cta-button">Responda já</a>
         </div>
     </header>
 
@@ -118,29 +118,18 @@
     </main>
 
     <footer class="footer-container">
-    <div class="container footer-content">
-        <div class="footer-section">
-            <h4>Nos Conheça & Contato</h4>
-            <div class="social-icons">
-                <a href="https://www.instagram.com/2brands.cc/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                
-                <a href="https://www.linkedin.com/company/2brandsagencia/posts/?feedView=all" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-
-                <a href="https://wa.me/5517997039771" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-                    <i class="fab fa-whatsapp"></i>
-                </a>
+        <div class="container footer-content">
+            <div class="footer-section">
+                <h4>Nos Conheça & Contato</h4>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/2brands.cc/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/2brandsagencia/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/5517997039771" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+                </div>
             </div>
         </div>
-    </div>
-    
-    <div class="footer-bottom">
-        &copy; 2026 2Brands - Todos os direitos reservados.
-    </div>
-</footer>
+        <div class="footer-bottom">&copy; 2026 2Brands - Todos os direitos reservados.</div>
+    </footer>
 
     <script>
     document.addEventListener('DOMContentLoaded', () => {
@@ -150,44 +139,44 @@
                 options: ["Potencial de viralização", "Alinhamento de valores e propósito de marca", "Orçamento de marketing do parceiro", "Número de seguidores do parceiro"],
                 correctAnswerIndex: 1,
                 feedback: {
-                    correct: "Correto! O alinhamento de valores é a base que sustenta a credibilidade da parceria a longo prazo.",
-                    incorrect: "Quase lá. Embora a viralização seja ótima, o alinhamento de valores é o que garante que a parceria pareça autêntica."
+                    correct: "Correto! O alinhamento de valores é a base.",
+                    incorrect: "Quase lá. O alinhamento de valores é o que garante a autenticidade."
                 }
             },
             {
                 question: "Para uma collab focada em fortalecer o capital de marca, qual destas métricas é a mais relevante?",
-                options: ["Vendas diretas do produto", "Custo por Clique (CPC) nos anúncios", "Análise de Sentimento e 'Share of Voice'", "Taxa de abertura de e-mail marketing"],
+                options: ["Vendas diretas do produto", "Custo por Clique (CPC)", "Análise de Sentimento e 'Share of Voice'", "Taxa de abertura de e-mail"],
                 correctAnswerIndex: 2,
                 feedback: {
-                    correct: "Correto! Brand Equity é medido pela percepção da marca.",
-                    incorrect: "Não exatamente. O Brand Equity é medido pela percepção e sentimento do público."
+                    correct: "Correto! Brand Equity é medido pela percepção.",
+                    incorrect: "Não exatamente. É medido pela percepção e sentimento."
                 }
             },
             {
                 question: "Qual é o principal diferencial de um modelo de 'Colaboração' em relação a um simples 'Licenciamento'?",
-                options: ["Colaboração é sempre mais barato", "Licenciamento envolve apenas o logo, Colaboração envolve o produto", "Colaboração implica na criação de um produto/serviço novo e conjunto", "Apenas marcas de luxo fazem Colaborações"],
+                options: ["Colaboração é sempre mais barato", "Licenciamento envolve apenas o logo", "Colaboração implica na criação de um produto novo", "Apenas marcas de luxo fazem Colaborações"],
                 correctAnswerIndex: 2,
                 feedback: {
-                    correct: "Exato! Colaboração é 'criar junto', gerando valor mútuo.",
-                    incorrect: "Na verdade, a colaboração envolve duas marcas se unindo para criar algo novo."
+                    correct: "Exato! Colaboração é 'criar junto'.",
+                    incorrect: "Na verdade, envolve criar algo novo em conjunto."
                 }
             },
             {
                 question: "Ao negociar uma parceria, qual é o erro mais comum que as marcas 'iniciantes' cometem?",
-                options: ["Focar excessivamente na divisão de receita imediata", "Ser transparente demais sobre suas fraquezas", "Pedir garantias legais excessivas", "Não ter um plano de marketing definido"],
+                options: ["Focar na divisão de receita imediata", "Ser transparente demais", "Pedir garantias legais excessivas", "Não ter um plano de marketing"],
                 correctAnswerIndex: 0,
                 feedback: {
-                    correct: "Precisamente. Muitas esquecem o valor estratégico de longo prazo.",
-                    incorrect: "O erro mais comum é focar apenas no dinheiro imediato e esquecer o posicionamento."
+                    correct: "Precisamente. Esquecem o valor estratégico.",
+                    incorrect: "O erro comum é focar apenas no dinheiro imediato."
                 }
             },
             {
-                question: "Qual elemento é fundamental para garantir que uma das marcas participantes da collab não 'canibalize' o público da outra?",
-                options: ["Lançar em das datas diferentes", "Usar a mesma comunicação", "Uma clara definição de 'storytelling' que una as duas marcas", "Oferecer o produto apenas para clientes existentes"],
+                question: "Qual elemento é fundamental para garantir que uma marca não 'canibalize' o público da outra?",
+                options: ["Lançar em datas diferentes", "Usar a mesma comunicação", "Uma clara definição de 'storytelling'", "Oferecer apenas para clientes existentes"],
                 correctAnswerIndex: 2,
                 feedback: {
-                    correct: "Correto! O storytelling justifica a parceria para o público.",
-                    incorrect: "O storytelling é a 'cola' que explica por que essa parceria faz sentido."
+                    correct: "Correto! O storytelling justifica a parceria.",
+                    incorrect: "O storytelling explica por que a parceria faz sentido."
                 }
             }
         ];
@@ -195,7 +184,7 @@
         let currentQuestionIndex = 0;
         let score = 0;
 
-        const startButton = document.querySelector('.cta-button[href="#quiz-section"]');
+        const startButton = document.getElementById('start-quiz-btn');
         const quizSection = document.getElementById('quiz-section');
         const resultsSection = document.getElementById('results-section');
         const questionText = document.getElementById('question-text');
@@ -203,4 +192,82 @@
         const feedbackText = document.getElementById('feedback-text');
         const progressBar = document.getElementById('progress-bar');
         const progressText = document.getElementById('progress-text');
-        const
+        const nextQuestionButton = document.getElementById('next-question-button');
+        const privacyNotice = document.getElementById('privacy-notice-2brands');
+
+        function startQuiz(event) {
+            event.preventDefault();
+            quizSection.classList.remove('hidden');
+            displayQuestion();
+            quizSection.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function displayQuestion() {
+            const currentQuestion = quizData[currentQuestionIndex];
+            questionText.innerHTML = currentQuestion.question;
+            answerOptions.innerHTML = '';
+            feedbackText.innerHTML = '';
+            nextQuestionButton.classList.add('hidden');
+            
+            if (currentQuestionIndex >= 2 && privacyNotice) {
+                privacyNotice.style.display = 'block';
+            } else if (privacyNotice) {
+                privacyNotice.style.display = 'none';
+            }
+
+            currentQuestion.options.forEach((option, index) => {
+                const btn = document.createElement('button');
+                btn.classList.add('answer-option');
+                btn.innerHTML = option;
+                btn.onclick = () => selectAnswer(index);
+                answerOptions.appendChild(btn);
+            });
+
+            const progress = ((currentQuestionIndex + 1) / quizData.length) * 100;
+            progressBar.style.width = `${progress}%`;
+            progressText.innerHTML = `Pergunta ${currentQuestionIndex + 1} de ${quizData.length}`;
+        }
+
+        function selectAnswer(selectedIndex) {
+            const correctIndex = quizData[currentQuestionIndex].correctAnswerIndex;
+            const btns = document.querySelectorAll('.answer-option');
+            btns.forEach(b => b.classList.add('disabled'));
+
+            if (selectedIndex === correctIndex) { 
+                score++;
+                btns[selectedIndex].classList.add('correct');
+                feedbackText.innerHTML = quizData[currentQuestionIndex].feedback.correct;
+            } else {
+                btns[selectedIndex].classList.add('incorrect');
+                btns[correctIndex].classList.add('correct');
+                feedbackText.innerHTML = quizData[currentQuestionIndex].feedback.incorrect;
+            }
+
+            nextQuestionButton.innerHTML = currentQuestionIndex === quizData.length - 1 ? "Ver Resultados" : "Próxima Pergunta";
+            nextQuestionButton.classList.remove('hidden');
+        }
+
+        function next() {
+            currentQuestionIndex++;
+            if (currentQuestionIndex < quizData.length) displayQuestion();
+            else showResults();
+        }
+
+        function showResults() {
+            quizSection.classList.add('hidden');
+            resultsSection.classList.remove('hidden');
+            const segment = score <= 3 ? 'Explorador' : 'Estrategista';
+            document.getElementById('result-headline').innerHTML = `Você acertou ${score} de 5.`;
+            document.getElementById('result-text').innerHTML = score <= 3 ? 
+                "Você quer fazer uma collab, mas precisa da estratégia correta. Fale com a 2Brands." : 
+                "Excelente! Você tem a teoria, agora vamos acelerar seus resultados.";
+            document.getElementById('hidden-segment').value = segment;
+            resultsSection.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        startButton.addEventListener('click', startQuiz);
+        nextQuestionButton.addEventListener('click', next);
+    });
+    </script>
+</body>
+</html>
